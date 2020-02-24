@@ -1,6 +1,6 @@
 # Capstone-project---Flatiron
 Google Merchandise Store Revenue Prediction
-
+https://www.kaggle.com/c/ga-customer-revenue-prediction
 
 # Project Motivation
 Most small businesses today have an e-commerce presence and need to analyze what drives revenue on their website/mobile app. That is why this Kaggle competition for the "Google Analytics Customer Revenue Prediction" really spoke to me.
