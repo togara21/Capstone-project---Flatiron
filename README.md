@@ -59,3 +59,5 @@ Dealing with missing values and placeholder values. Ten of the columns had mostl
 
 # EXPLORE THE DATA
 ![](images/revenue.png)
+Only 1.274% of the store visits resulted in transaction revenue. 
+
