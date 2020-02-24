@@ -66,7 +66,7 @@ Only 1.274% of the store visits resulted in transaction revenue.
 
 Normally distributed natural log of revenues
 
-Initial feature exploration through some visualizations 
+## Initial feature exploration through some visualizations 
 
 ![](images/channelgrouping_pie.png)
 
@@ -103,3 +103,52 @@ Initial feature exploration through some visualizations
 ![](images/month_pie.png)
 
 ![](images/dayofweek_pie.png)
+
+# Correlation of features
+
+![](images/correlation_heatmap.png)
+
+geoNetwork.continent_Americas             geoNetwork.country_other                    0.621833
+geoNetwork.country_other                  geoNetwork.continent_Americas               0.621833
+trafficSource.medium_referral             channelGrouping_Organic Search              0.649875
+channelGrouping_Organic Search            trafficSource.medium_referral               0.649875
+trafficSource.medium_referral             trafficSource.medium_organic                0.649875
+trafficSource.medium_organic              trafficSource.medium_referral               0.649875
+trafficSource.medium_referral             trafficSource.source_google                 0.678662
+trafficSource.source_google               trafficSource.medium_referral               0.678662
+trafficSource.medium_referral             trafficSource.source_youtube.com            0.729637
+trafficSource.source_youtube.com          trafficSource.medium_referral               0.729637
+geoNetwork.country_United States          geoNetwork.country_other                    0.733014
+geoNetwork.country_other                  geoNetwork.country_United States            0.733014
+device.browser_Safari                     device.browser_Chrome                       0.743782
+device.browser_Chrome                     device.browser_Safari                       0.743782
+channelGrouping_Social                    trafficSource.medium_referral               0.759939
+trafficSource.medium_referral             channelGrouping_Social                      0.759939
+geoNetwork.subContinent_Northern America  geoNetwork.country_other                    0.777331
+geoNetwork.country_other                  geoNetwork.subContinent_Northern America    0.777331
+trafficSource.source_mall.googleplex.com  channelGrouping_Referral                    0.777456
+channelGrouping_Referral                  trafficSource.source_mall.googleplex.com    0.777456
+geoNetwork.country_United Kingdom         geoNetwork.subContinent_Northern Europe     0.792103
+geoNetwork.subContinent_Northern Europe   geoNetwork.country_United Kingdom           0.792103
+geoNetwork.continent_Americas             geoNetwork.country_United States            0.825334
+geoNetwork.country_United States          geoNetwork.continent_Americas               0.825334
+geoNetwork.subContinent_other             geoNetwork.continent_Africa                 0.856200
+geoNetwork.continent_Africa               geoNetwork.subContinent_other               0.856200
+geoNetwork.subContinent_Northern America  geoNetwork.continent_Americas               0.875456
+geoNetwork.continent_Americas             geoNetwork.subContinent_Northern America    0.875456
+geoNetwork.subContinent_Southern Asia     geoNetwork.country_India                    0.924022
+geoNetwork.country_India                  geoNetwork.subContinent_Southern Asia       0.924022
+trafficSource.source_google               channelGrouping_Organic Search              0.927309
+trafficSource.medium_organic              trafficSource.source_google                 0.927309
+channelGrouping_Organic Search            trafficSource.source_google                 0.927309
+trafficSource.source_google               trafficSource.medium_organic                0.927309
+geoNetwork.subContinent_Northern America  geoNetwork.country_United States            0.942748
+geoNetwork.country_United States          geoNetwork.subContinent_Northern America    0.942748
+trafficSource.source_youtube.com          channelGrouping_Social                      0.960126
+channelGrouping_Social                    trafficSource.source_youtube.com            0.960126
+totals.hits                               totals.pageviews                            0.983204
+totals.pageviews                          totals.hits                                 0.983204
+channelGrouping_Affiliates                trafficSource.source_Partners               0.999752
+trafficSource.source_Partners             trafficSource.medium_affiliate              0.999752
+                                          channelGrouping_Affiliates                  0.999752
+trafficSource.medium_affiliate            trafficSource.source_Partners               0.999752
