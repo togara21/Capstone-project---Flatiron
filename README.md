@@ -58,4 +58,4 @@ The data is around 1 million rows by 12 columns provided by Google in this Kaggl
 Dealing with missing values and placeholder values. Ten of the columns had mostly null values. 
 
 # EXPLORE THE DATA
-http://localhost:8888/files/Dropbox/Personal/Flatiron/Projects/Capstone/Pictures/revenue.png
+
