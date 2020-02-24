@@ -108,4 +108,47 @@ Normally distributed natural log of revenues
 
 ![](images/correlation_heatmap.png)
 
+![](images/correlation_list.png)
+
+# Features:
+75 features after one-hot encoding categorical variables.
+
+# Principal Component Analysis (PCA)
+50 features explains 97% of the variance in the data. This will help to cut down the number of features used in the modeling phase.
+
+# Model
+I decided to go with Random Forest Regression because it was a powerful ensemble method that can produce some accurate predictions. My initial model's train set had a MSE of 0.60 which is very good but the validation set's MSE was around 3.5, which tells me my model is severly overfitting the train data and this requires some hyperparameter tuning. 
+
+I used a grid search to try and tune my hyperparameters, n_estimators, criterion, max_depth, min_samples_split, and min_samples_leaf. Unfortunately this grid search took over two hours to run because it is still 50 columns by 1 million rows. The following visualizations gives some insight into how I decided to test different values for my grid search.
+
+![](images/treedepth_mse.png)
+
+![](images/minsamplesleaf_mse.png)
+
+![](images/minsamplessplit_mse.png)
+
+For my final model I eventually went with:
+n_estimators = 100
+criterion = 'mse'
+max_depth = 8
+min_samples_split = 450
+min_samples_leaf=50
+
+My tuned model had a train, validation, and test set MSE of around 2.87. My model appears to be well fit after tuning, but obviously way less accurate than my initial overfit model. The r_2 of my final model was also only around 25.7% which leaves a lot to be desired.
+
+## Feature importances
+
+![](images/feature_importance.png)
+
+The top 5 features explains over 76% of the variance of this model. I thought it would make sense to try a random forest regressor model with just these 5 features and compare the MSE and r_2 to my tuned model with 50 features.
+
+The MSE of the model with just 5 features ended up being 3.13 which is only 8% less accurate than the 2.87 MSE of my model with 50 features that is very time consuming to run. 
+
+# Business recommendations
+
+Based on the mean squared error (MSE) of 2.87, and r_2 of 25%, my model doesn't do the best job predicting revenues. There were some other people on Kaggle that used various gradient boosting algorithms that got their MSE down to 1.5, but it seems their model had some serious overfitting going on.
+
+If I had access to cloud computing services like AWS I could run more complex grid searches to tune my parameters even more. Each grid search took over 2 hours to run on my local computer. Also, I would have tried XGBoost or a similar gradient boosting algorithm which usually has pretty good results for regression analysis. I would also try to eliminate more features that are highly correlated in future models. There is a lot of correlation between the location features.
+
+Based on my findings, I would strongly recommend a business to just pay for resources to collect the 5 most important features because the accuracy is only 8% lower. The cost of collecting the data of 50+ features and running a model with 50+ features could be very expensive. It also took my random forest grid search over 2 hours to run, but when I used just 5 features it would run in less than 5 minutes.
 
