@@ -62,3 +62,7 @@ Dealing with missing values and placeholder values. Ten of the columns had mostl
 
 Only 1.274% of the store visits resulted in transaction revenue. 
 
+![](images/distro_revenue.png)
+
+Normally distributed natural log of revenues
+
