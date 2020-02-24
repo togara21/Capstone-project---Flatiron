@@ -66,3 +66,11 @@ Only 1.274% of the store visits resulted in transaction revenue.
 
 Normally distributed natural log of revenues
 
+Initial feature exploration through some visualizations (just showing a couple of examples because there are over 30 features)
+
+![](images/channelgrouping_pie.png)
+
+![](images/dayofweek_pie.png)
+
+![](images/devicecategory_pie.png)
+
