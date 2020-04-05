@@ -152,9 +152,3 @@ If I had access to cloud computing services like AWS I could run more complex gr
 
 Based on my findings, I would strongly recommend a business to just pay for resources to collect the 5 most important features because the accuracy is only 8% lower. The cost of collecting the data of 50+ features and running a model with 50+ features could be very expensive. It also took my random forest grid search over 2 hours to run, but when I used just 5 features it would run in less than 5 minutes.
 
-Added another line to README.md
-add yet another line
-add another
-another
-Try unsupervised learning
-ADD t README.md
