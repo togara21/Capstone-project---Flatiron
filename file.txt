@@ -3,3 +3,4 @@ new text in the file
 test1
 test2
 test3
+test4
