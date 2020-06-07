@@ -4,3 +4,4 @@ new text in the file
 2
 3
 4
+5
