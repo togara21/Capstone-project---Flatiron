@@ -2,3 +2,4 @@ this is a new file
 new text in the file
 1
 2
+3
